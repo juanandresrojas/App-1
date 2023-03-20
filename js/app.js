@@ -36,7 +36,7 @@ function ocultarMenu() {
 
 function cambioSeccion(seccion) {
     seccion.scrollIntoView({
-        behavior: 'smooth';
+        behavior: 'smooth'
     })
 }
 
