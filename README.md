@@ -1,2 +1,2 @@
-App-Tecnologia
+#App-Tecnologia
 Tutoriales / Programación de software
