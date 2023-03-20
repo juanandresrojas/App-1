@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded',() =>{
     mostrarMenu();
     ocultarMenu();
     fechaActual();
+    cambioSeccion(seccion);
 });
 
 function mostrarMenu() {

@@ -11,10 +11,8 @@ html {
     box-sizing: border-box;
     /* RESETEA EL TAMAÑO POR DEFECTO EL TAMAÑO DE LETRA, POR MULTIPLOS DE 10, 1REM = 10PX */
     font-size: 62.5%;
-
-    
     /* PARA NAVEGADORES VIEJOS NO SIRVEN */
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 body {
