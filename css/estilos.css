@@ -9,8 +9,10 @@
 
 html {
     box-sizing: border-box;
+
     /* RESETEA EL TAMAÑO POR DEFECTO EL TAMAÑO DE LETRA, POR MULTIPLOS DE 10, 1REM = 10PX */
     font-size: 62.5%;
+
     /* PARA NAVEGADORES VIEJOS NO SIRVEN */
     scroll-behavior: smooth;
 }
@@ -39,6 +41,7 @@ p,
 a {
     font-family: var(--letra-principal);
 }
+
 .contenedor {
     margin: 0 auto;
     max-width: 120rem;
@@ -59,6 +62,7 @@ a {
 .azul {
     background-color: var(--azul-claro);
 }
+
 .bordes {
     border: .2rem solid var(--azul-claro);
     color: var(--azul-claro);
@@ -67,10 +71,12 @@ a {
     text-align: center;
     transition: background-color .3s ease-in-out;
 }
+
 .bordes:hover {
     background-color: var(--azul-claro);
     color: var(--blanco);
 }
+
 /********************************** ENCABEZADO ***************************************************/
 
 .encabezado {
@@ -86,7 +92,7 @@ a {
     z-index: 1;
 }
 
-.encabezado::before{
+.encabezado::before {
     content: '';
     position: absolute;
     top: 0;
@@ -163,7 +169,9 @@ a {
 .input-encabezado {
     display: inline-grid;
 }
+
 @keyframes desplazamiento {
+
     /* DEZPLAZAMIENTO INICIAL */
     from {
         transform: translateX(-100%);
@@ -176,10 +184,10 @@ a {
 }
 
 @keyframes desplazamiento-2 {
-    from{
+    from {
         display: none;
     }
-    
+
     0% {
         transform: translateX(0%);
     }
@@ -195,7 +203,7 @@ a {
 
 @media(min-width: 768px) {
 
-    .encabezado{
+    .encabezado {
         background-attachment: fixed;
     }
 
@@ -215,7 +223,7 @@ a {
         background-color: unset;
     }
 
-    .navegacion a{
+    .navegacion a {
         display: inline;
     }
 }
@@ -240,7 +248,7 @@ a {
     max-width: 90%;
 }
 
-.formulario-encabezado h3{
+.formulario-encabezado h3 {
     font-size: 3rem;
     text-align: center;
     margin-top: 0;
@@ -263,23 +271,25 @@ a {
 
 @media(min-width: 768px) {
     .contenido-encabezado {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     margin-left: 3%;
-     margin-right: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 3%;
+        margin-right: 3%;
     }
-    .contenido-encabezado, .formulario-encabezado {
-     flex: 0 0 calc(60% - 1rem);
+
+    .contenido-encabezado,
+    .formulario-encabezado {
+        flex: 0 0 calc(60% - 1rem);
     }
-    
-    .texto-encabezado h2{
+
+    .texto-encabezado h2 {
         font-size: 5rem;
         text-align: start;
         /* padding-top: 0; */
         margin: 13rem 0;
     }
- }
+}
 
 
 /********************************** CONTENIDO VENTAJAS ***************************************************/
@@ -292,6 +302,7 @@ a {
 .ventaja {
     color: var(--blanco);
     text-align: center;
+    margin-bottom: 10rem;
 }
 
 .ventaja ion-icon {
@@ -306,97 +317,103 @@ a {
     font-size: 2rem;
 }
 
-@media(min-width: 768px) {
-   .contenido-ventajas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-   }
-}
-
-/********************************** SECCION DE NOSOTROS ***************************************************/
-
-.nosotros h2 {
-    text-align: center;
-    font-size: 3rem;
-    color: var(--azul-claro);
-}
-
-.contenido-nosotros {
-    background-image: url('../img/programando.jpg');
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    background-size: cover;
-    background-position: center center;
-}
-
-.texto-nosotros {
-    grid-row: 2/3;
-    background-color: var(--blanco);
-
-}
-
-.texto-nosotros h4 {
-    font-size: 2.5rem;
-    color: var(--azul-claro);
-    text-align: center;
-}
-
-.texto-nosotros p {
-    font-size: 2.2rem;
-    text-align: center;
-}
 
 @media(min-width: 768px) {
-   .nosotros h2 {
-    font-size: 5rem;
-   }  
+    .contenido-ventajas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
 
-   .contenido-nosotros {
-    grid-template-columns: repeat(2, 1fr);
-    background-attachment: fixed;
-   }
-
-   .texto-nosotros {
-    padding: 1rem;
-   }
-
-   .texto-nosotros a {
-    width: 50%;
-    margin: 0 20%;
-   }
-
-   .bordes {
-    display: inline-block;
-    text-align: center;
-   }
-   .texto-nosotros p {
-    text-align: left;
-   }
-}  
-
-/********************************** SECCION DE SERVICIOS ***************************************************/
-
-.servicios {
-    padding-top: 5rem;
+    .ventaja {
+        margin-bottom: 0;
+    }
 }
 
-.servicios h2 {
-    font-size: 5rem;
-    text-align: center;
-    color: var(--azul-claro);
-}
+    /********************************** SECCION DE NOSOTROS ***************************************************/
 
-.servicio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5rem 0;
+    .nosotros h2 {
+        text-align: center;
+        font-size: 3rem;
+        color: var(--azul-claro);
+    }
 
-}
+    .contenido-nosotros {
+        background-image: url('../img/programando.jpg');
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        background-size: cover;
+        background-position: center center;
+    }
 
-.servicio ion-icon{
-    /* background-color: var(--azul-claro);    
+    .texto-nosotros {
+        grid-row: 2/3;
+        background-color: var(--blanco);
+
+    }
+
+    .texto-nosotros h4 {
+        font-size: 2.5rem;
+        color: var(--azul-claro);
+        text-align: center;
+    }
+
+    .texto-nosotros p {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    @media(min-width: 768px) {
+        .nosotros h2 {
+            font-size: 5rem;
+        }
+
+        .contenido-nosotros {
+            grid-template-columns: repeat(2, 1fr);
+            background-attachment: fixed;
+        }
+
+        .texto-nosotros {
+            padding: 1rem;
+        }
+
+        .texto-nosotros a {
+            width: 50%;
+            margin: 0 20%;
+        }
+
+        .bordes {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .texto-nosotros p {
+            text-align: left;
+        }
+    }
+
+    /********************************** SECCION DE SERVICIOS ***************************************************/
+
+    .servicios {
+        padding-top: 5rem;
+    }
+
+    .servicios h2 {
+        font-size: 5rem;
+        text-align: center;
+        color: var(--azul-claro);
+    }
+
+    .servicio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 0;
+
+    }
+
+    .servicio ion-icon {
+        /* background-color: var(--azul-claro);    
     height: 10rem;
     width: 8rem;
     border-radius: 50%; 
@@ -404,172 +421,178 @@ a {
     color: var(--blanco);
     font-size: 4rem;
     box-shadow: 1rem 1rem 1.6rem -.6rem rgba(0, 0, 0, 0.45); */
-     transition: all .5s ease-in-out;
-     font-size: 6rem;
-}
-
-.servicio h4 {
-    font-size: 2.2rem;
-    color: var(--azul-oscuro);
-}
-
-.servicio p {
-    font-size: 1.9rem;
-    text-align: center;
-    margin-top: -5%;
-}
-
-@media(min-width: 768px) {
-   .contenido-servicios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-   }
-
-   .servicio {
-    margin: 1rem 0;
-   }
-
-   .servicio p {
-    text-align: center;
-   }
-
-   .servicio:hover{
-    cursor: pointer;
-   }
-
-   .servicio:hover ion-icon {
-    background-color: var(--blanco);
-    color: var(--azul-claro);
-   }
-}
-
-/********************************** CONTACTO ***************************************************/
-
-.contacto {
-    padding-top: 5rem;
-}
-
-.contacto h2 {
-    text-align: center;
-    color: var(--azul-claro);
-    font-size: 5rem;
-}
-
-.input-contacto {
-    display: inline-grid;
-}
-
-.informacion-contacto {
-    background-image: url('../img/mac.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: auto;
-    position: relative;
-    z-index: -1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.informacion-contacto::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
-.informacion-contacto h3 {
-    font-size: 4rem;
-    text-align: center;
-}
-
-.informacion-contacto p {
-    font-size: 2rem;
-}
-
-.informacion-contacto h3, .informacion-contacto p {
-    color: var(--blanco);
-
-}
-
-.formulario-contacto {
-    padding: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--azul-oscuro);     
-}
-
-.input-contacto label {
-    color: var(--blanco);
-    font-family: var(--letra-principal);
-    display: block;
-    margin: 1rem 0;
-    font-weight: bold;
-}
-
-.input-contacto input {
-    padding: 1.2rem 1rem;
-    font-family: var(--letra-principal);
-}
-
-.input-contacto input, .input-contacto textarea {
-    width: 100%;
-    outline: none;
-}
-
-.input-contacto textarea {
-    resize: none;
-}
-
-.input-contacto input[type="submit"]{
-    margin: 1rem auto;
-    padding: 1rem 3rem;
-    transition: background-color .3s ease-in-out;
-}
-
-.input-contacto input[type="submit"]:hover{
-    background-color: var(--blanco);
-    color: var(--azul-claro);
-}
-@media(min-width: 768px) {
-    .informacion-contacto{
-        min-width: 100vh;
-    }
-    .contenido-contacto {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        transition: all .5s ease-in-out;
+        font-size: 6rem;
     }
 
-    .input-contacto input[type="submit"]{
-        width: 25%;
+    .servicio h4 {
+        font-size: 2.2rem;
+        color: var(--azul-oscuro);
     }
-}
 
-/********************************** PIE DE PAGINA ***************************************************/
+    .servicio p {
+        font-size: 1.9rem;
+        text-align: center;
+        margin-top: -5%;
+    }
 
-.logo h2 {
-    font-size: 3rem;
-}
+    @media(min-width: 768px) {
+        .contenido-servicios {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+        }
 
-.logo h2 span{
-    color: var(--azul-claro);
-}
+        .servicio {
+            margin: 1rem 0;
+        }
 
-.footer .logo h2, p{
-    text-align: center;
-}
+        .servicio p {
+            text-align: center;
+        }
 
-@media(min-width: 768px) {
-    .footer {
+        .servicio:hover {
+            cursor: pointer;
+        }
+
+        .servicio:hover ion-icon {
+            background-color: var(--blanco);
+            color: var(--azul-claro);
+        }
+    }
+
+    /********************************** CONTACTO ***************************************************/
+
+    .contacto {
+        padding-top: 5rem;
+    }
+
+    .contacto h2 {
+        text-align: center;
+        color: var(--azul-claro);
+        font-size: 5rem;
+    }
+
+    .input-contacto {
+        display: inline-grid;
+    }
+
+    .informacion-contacto {
+        background-image: url('../img/mac.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: auto;
+        position: relative;
+        z-index: -1;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
+
     }
-}
+
+    .informacion-contacto::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    .informacion-contacto h3 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .informacion-contacto p {
+        font-size: 2rem;
+    }
+
+    .informacion-contacto h3,
+    .informacion-contacto p {
+        color: var(--blanco);
+
+    }
+
+    .formulario-contacto {
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--azul-oscuro);
+    }
+
+    .input-contacto label {
+        color: var(--blanco);
+        font-family: var(--letra-principal);
+        display: block;
+        margin: 1rem 0;
+        font-weight: bold;
+    }
+
+    .input-contacto input {
+        padding: 1.2rem 1rem;
+        font-family: var(--letra-principal);
+    }
+
+    .input-contacto input,
+    .input-contacto textarea {
+        width: 100%;
+        outline: none;
+    }
+
+    .input-contacto textarea {
+        resize: none;
+    }
+
+    .input-contacto input[type="submit"] {
+        margin: 1rem auto;
+        padding: 1rem 3rem;
+        transition: background-color .3s ease-in-out;
+    }
+
+    .input-contacto input[type="submit"]:hover {
+        background-color: var(--blanco);
+        color: var(--azul-claro);
+    }
+
+    @media(min-width: 768px) {
+        .informacion-contacto {
+            min-width: 100vh;
+        }
+
+        .contenido-contacto {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .input-contacto input[type="submit"] {
+            width: 25%;
+        }
+    }
+
+    /********************************** PIE DE PAGINA ***************************************************/
+
+    .logo h2 {
+        font-size: 3rem;
+    }
+
+    .logo h2 span {
+        color: var(--azul-claro);
+    }
+
+    .footer .logo h2,
+    p {
+        text-align: center;
+    }
+
+    @media(min-width: 768px) {
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
